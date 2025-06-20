@@ -15,7 +15,7 @@ Background:
 
     @id:2 @ConsultarPersonajePorID
     Scenario: T-API-BTFAC-123-CA02- Consultar Por ID
-        Given url base_url + '/1'
+        Given url base_url + '/5'
         When method GET
         Then status 200
         And print response  
