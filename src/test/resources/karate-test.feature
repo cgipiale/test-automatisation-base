@@ -55,7 +55,14 @@ Background:
         Then status 204
         * print response
 
- 
+       @id:7 @AgregarSuperHeroeCamposFaltantes
+      Scenario: T-API-BTFAC-123-CA04- Agregar Personaje Campos Faltantes
+          Given url base_url
+          And def ingreso = read('classpath:../payloads/SuperHeroeFaltante.json')
+          And request ingreso
+          When method POST
+          Then status 400
+          And print response
 	
 	@id:8 @EliminaPersonajeNo existe
     Scenario: T-API-BTFAC-123-CA06- Eliminar un Personaje No existe
